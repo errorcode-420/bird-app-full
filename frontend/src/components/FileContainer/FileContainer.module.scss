@@ -1,0 +1,31 @@
+.fileContainer {
+  flex: 1; /* Flex-Gewichtung für gleichmäßige Verteilung */
+  height: 200px;
+  background-color: var(--theme-color3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative; /* Für das Bild-Container */
+  overflow: hidden; /* Versteckt Überlauf */
+  margin: 0 5px; /* Abstand zwischen den kleinen Divs */
+  border: 2px solid #fff; /* Weißer Rand um den Container */
+  border-radius: 15px; /* Abgerundete Ecken */
+}
+
+.fileContainer img {
+width: 140px;  height: 100%; /* Bild passt sich der Höhe an */
+  object-fit:cover; /* Beibehaltung des Seitenverhältnisses */
+  border-radius: 15px; /* Abgerundete Ecken für das Bild */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .fileContainer {
+    margin: 0 2px; /* Weniger Abstand bei kleineren Bildschirmen */
+  }
+}
+
+@media (max-width: 480px) {
+  .fileContainer {
+  }
+}

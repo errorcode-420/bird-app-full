@@ -1,0 +1,14 @@
+{
+  "name": "bird-app",
+  "version": "1.0.0",
+  "description": "Main directory for Bird Identification App",
+  "scripts": {
+    "start": "concurrently \"npm run start:frontend\" \"npm run start:backend\" ",
+    "start:backend": "cd backend && npm start",
+    "start:frontend": "cd frontend && npm install && npm start"
+  },
+  "private": true,
+  "dependencies": {
+    "concurrently": "^7.3.0"
+  }
+}

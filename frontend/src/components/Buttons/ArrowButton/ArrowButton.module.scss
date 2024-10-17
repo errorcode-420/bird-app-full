@@ -1,0 +1,61 @@
+.arrowButton {
+  background-color: #fff;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  margin: 0 10px; // Fügt Abstand zwischen den Buttons und dem Rand hinzu
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  border-radius: 5px;
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+
+    &:hover {
+      filter: none; // Deaktiviert den Hover-Effekt
+      transform: none; // Erhöht die Größe um 5%
+    }
+  }
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  /* Das Bild passt sich flexibel der Button-Größe an */
+  img {
+    width: 100%; // Flexibles Width für das SVG-Icon
+    height: auto; // Beibehaltung des Seitenverhältnisses
+
+  }
+
+  &:first-of-type {
+    margin-right: 10px; // Abstand zum Slider-Container
+  }
+
+  &:last-of-type {
+    margin-left: 10px; // Abstand zum Slider-Container
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .arrowButton {
+    padding: 8px; // Kleinere Padding für kleinere Bildschirme
+
+    img {
+      max-width: 20px; // Reduziere die Größe des SVGs
+      max-height: 20px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .arrowButton {
+    padding: 6px; // Noch kleineres Padding für sehr kleine Bildschirme
+
+    img {
+      max-width: 16px; // Weitere Reduzierung der SVG-Größe
+      max-height: 16px;
+    }
+  }
+}

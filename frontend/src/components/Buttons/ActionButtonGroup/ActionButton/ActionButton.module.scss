@@ -1,0 +1,36 @@
+.actionButton {
+    width: 40px; /* Breite des Buttons */
+    height: 40px; /* Höhe des Buttons */
+    border-radius: 50%; /* Runde Form */
+    border: none; /* Kein Rand */
+    cursor: pointer; /* Zeiger beim Hover */
+    display: flex; /* Flexbox für Zentrierung des Inhalts */
+    align-items: center; /* Vertikale Zentrierung */
+    justify-content: center; /* Horizontale Zentrierung */
+    transition: all 0.3s ease-in-out; /* Weicher Übergang für Hovereffekte */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Schatteneffekt */
+}
+
+.icon {
+    width: 20px; /* Größe des SVGs */
+    height: 20px;
+    transition: filter 0.3s ease-in-out; /* Übergang für das Filter beim Hover */
+
+}
+
+.actionButton:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Intensiverer Schatten beim Hover */
+    transform: translateY(-2px); /* Leichter Aufwärts-Effekt */
+    filter: brightness(1.2); /* Button etwas aufhellen */
+}
+
+/* Invertierte Version */
+.invert:hover .icon {
+    filter: invert(1); /* Invertiere das SVG bei Hover */
+}
+
+.actionButton:active {
+    transform: translateY(0); /* Zurücksetzen bei Klick */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Schatten beim Klick zurücksetzen */
+}
+

@@ -1,0 +1,51 @@
+# Python-Bytecode
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtuelle Umgebungen
+venv/
+env/
+ENV/
+.venv/
+env.bak/
+env.bak/
+
+# Logdateien
+*.log
+
+# Package-Daten
+*.egg-info/
+dist/
+build/
+
+
+# Config-Daten
+#config/serviceAccountKey.json
+# IDEs und Editor spezifische Dateien
+.idea/
+.vscode/
+*.swp
+
+# Umgebungsvariablen
+.env
+.env.local
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+
+# Test- und Coverage-Dateien
+.coverage
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+
+# Backup-Dateien
+*~
+
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml

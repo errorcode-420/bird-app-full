@@ -1,0 +1,29 @@
+.resultContainer {
+  width: 60%; /* Breite des großen Divs */
+  max-width: 400px;
+  max-height: 100%;
+  display: flex;
+  justify-content: center; /* Zentriert das große Div */
+  position: relative; /* Für das Bild-Container */
+  overflow: hidden; /* Versteckt Überlauf */
+  border: 2px solid #fff; /* Weißer Rand um den Container */
+  border-radius: 15px; /* Abgerundete Ecken */
+}
+
+.resultContainer .image {
+  width: 100%; /* Bild passt sich der Breite an */
+  height: 100%; /* Bild passt sich der Höhe an */
+  height: 250px;
+  object-fit: cover; /* Beibehaltung des Seitenverhältnisses */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  /* Hier können responsive Anpassungen erfolgen */
+}
+
+@media (max-width: 480px) {
+  .resultContainer {
+      width: 100%; /* Breite für Mobilgeräte */
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "install-requirements": "pip install -r requirements.txt",
+    "start": "npm run install-requirements && python src/app.py",
+    "build": "echo 'Build step for deployment' && echo 'Add your deployment commands here'"
+  },
+  "private": true
+}

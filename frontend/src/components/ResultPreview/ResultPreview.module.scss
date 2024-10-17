@@ -1,0 +1,44 @@
+@import "../../Themes.scss";
+
+
+/* Container für das große Div */
+.resultPreview {
+  min-height: 270px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+  width: 100%; /* Gleiche Breite wie der Container */
+}
+
+/* Pfeil-Buttons */
+.arrowButton {
+  background-color: transparent;
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+  margin: 0 20px; /* Abstand von den Divs */
+}
+
+/* Responsive Design für Tablets */
+@media (max-width: 768px) {
+  .resultPreview {
+    width: 100%; /* Breite für Mobilgeräte */
+  }
+
+  .arrowButton {
+    font-size: 25px;
+  }
+}
+
+/* Responsive Design für kleine Bildschirme (z.B. Smartphones) */
+@media (max-width: 480px) {
+  .resultPreview {
+    width: 100%; /* Breite für Mobilgeräte */
+  }
+
+
+  .arrowButton {
+    font-size: 20px;
+  }
+}

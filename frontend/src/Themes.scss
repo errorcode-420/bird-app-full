@@ -1,0 +1,105 @@
+
+
+
+// Farbvariablen für Buttons (Orange-Töne)
+$color-orange-light: #FFA726;
+$color-orange-medium: #FB8C00;
+$color-orange-dark: #F57C00;
+$color-orange-very-dark: #DC5F00;
+
+$color-white: #ffffff;
+
+
+$color-gray-dark: #373A40;
+$color-gray-light: #686D76;
+
+$color-black: #1a1a1a;
+
+
+
+
+// Font-Variablen
+$font-family: 'Roboto', sans-serif;   /* Beispielhafte Schriftart */
+$font-size-base: 16px;
+
+
+
+
+:root {
+  --theme-color1: #222629;
+  --theme-color2: #474B4F;
+  --theme-color3: #B2B1B9;
+  --theme-color4: #88C232;
+  --theme-color5: #61892F;
+
+  
+
+
+  --background-color2: #{$color-gray-light};
+
+
+  --button-color1: #{$color-orange-very-dark};
+
+  --link-hover-color: #{$color-gray-light};
+  --link-active-color: #{$color-orange-very-dark};
+
+  --text-color1: #{$color-white};
+  --text-color2: #{$color-black};
+}
+
+/* Gemeinsame Eigenschaften für runde Buttons */
+
+// Allgemeine Textstile für die gesamte App
+/* Container für das große Div */
+
+
+
+
+html, body {
+  overflow: hidden; /* Verhindert das Scrollen des Body */
+  height: 100%; /* Stellt sicher, dass die Seite die volle Höhe nutzt */
+}
+
+
+body {
+  font-family: 'Roboto', sans-serif; // Setzt die Schriftart für den gesamten Text
+  color: #{$color-white};
+  background-color: var(--theme-color2); // Setzt die Schriftfarbe auf Weiß
+}
+
+
+h1 {
+  color: #{$color-white};
+}
+
+p {
+  font-size: 20px; /* Standardgröße für Desktop */
+  color: #{$color-white};
+  text-align: center;
+  margin: 10px 0; /* Abstand zwischen den Elementen */
+}
+
+/* Responsive Design für Tablets */
+@media (max-width: 1024px) {
+   p {
+    font-size: 18px; /* Kleinere Schriftgröße für Tablets */
+    margin: 8px 0; /* Anpassung des Abstands */
+  }
+}
+
+/* Responsive Design für Tablets */
+@media (max-width: 768px) {
+   p {
+    font-size: 16px; /* Kleinere Schriftgröße für Tablets */
+    margin: 8px 0; /* Anpassung des Abstands */
+  }
+}
+
+/* Responsive Design für kleine Bildschirme (z.B. Smartphones) */
+@media (max-width: 480px) {
+  p {
+    font-size: 14px; /* Noch kleinere Schriftgröße für Smartphones */
+    margin: 6px 0; /* Geringerer Abstand */
+  }
+}
+  

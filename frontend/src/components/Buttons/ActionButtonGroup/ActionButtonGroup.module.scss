@@ -1,0 +1,8 @@
+.actionButtonGroup {
+    position: absolute; /* Absolut innerhalb des Bildes positioniert */
+    bottom: 10px; /* Abstand vom unteren Rand des Containers */
+    left: 50%; /* Zentriert horizontal */
+    transform: translateX(-50%); /* Korrektur für zentrierte Position */
+    display: flex; /* Flexbox für horizontale Anordnung */
+    gap: 10px; /* Abstand zwischen den Buttons */
+}

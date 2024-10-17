@@ -1,0 +1,26 @@
+.appContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 80px; // Platz für das fixierte Menü oben
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+.menuContainer {
+  position: fixed; // Fixiert das Menü am oberen Rand
+  top: 0;
+  left: 0;
+  width: 100%; // Nimmt die gesamte Breite des Bildschirms ein
+  background-color: var(--theme-color1); // Hintergrundfarbe des Menüs
+  z-index: 1000; // Stellt sicher, dass das Menü über anderen Elementen liegt
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); // Optional: Schatten für visuelle Trennung
+}
+
+.content {
+  background: linear-gradient(to bottom, var(--theme-color2), var(--theme-color1)); // Von Schwarz zu Grau
+  flex: 1;
+  width: 100%;
+  box-sizing: border-box;
+  overflow-y: auto; // Ermöglicht das Scrollen des Inhalts
+}

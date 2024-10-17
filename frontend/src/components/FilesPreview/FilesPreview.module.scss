@@ -1,0 +1,52 @@
+.filesPreview {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Zentriert den Container horizontal */
+  margin-bottom: auto; /* Stellt sicher, dass der Container horizontal in der Mitte ist */
+  background-color: var(--theme-color2);
+  padding: 10px 0;
+  border-radius: 10px; /* Runde Ecken */
+}
+
+/* Falls der Inhalt innerhalb des Containers zu groß ist, nutze diese Option */
+.fileCollectionContainer {
+  display: flex;
+  justify-content: space-between; /* Verteilung der kleinen Divs */
+  flex-wrap: wrap; /* Umbrüche bei kleinen Bildschirmen ermöglichen */
+}
+
+/* Pfeil-Buttons */
+.arrowButton {
+  background-color: transparent;
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+  margin: 0 20px; /* Abstand von den Divs */
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .filesPreview {
+  }
+}
+
+@media (max-width: 768px) {
+  .filesPreview {
+  }
+
+  .arrowButton {
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  .filesPreview {
+    flex-wrap: wrap; /* Kleinere Divs in Zeilen umbrechen */
+    margin-bottom: 70px; /* Stellt sicher, dass der Container horizontal in der Mitte ist */
+
+  }
+
+  .arrowButton {
+    font-size: 20px;
+  }
+}

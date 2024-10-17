@@ -1,0 +1,29 @@
+.menu {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  background-color: var(--theme-color2); // Hintergrundfarbe des Menüs
+}
+
+.menuButton {
+  padding: 10px 20px;
+  background-color: var(--theme-color);
+  border: none;
+  color: white;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: var(--theme-color2);
+  }
+}
+
+/* Active Zustand für den ausgewählten Menüpunkt */
+.active {
+  background-color: var(--theme-color2);
+  color: var(--theme-color4);
+  font-weight: bold; /* Macht den Text fett für bessere Sichtbarkeit */
+}
