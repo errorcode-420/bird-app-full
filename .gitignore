@@ -12,6 +12,7 @@
 /build
 
 /backend/src/model/model.h5
+/backend/config/serviceAccountKey.json
 
 
 # misc
