@@ -2,18 +2,9 @@ import os
 import json
 from flask import Flask, request, jsonify
 from flask_cors import CORS
-# import firebase_admin
-# from firebase_admin import credentials
-from services.model_service import ModelService
-from services.image_service import preprocess_image
 
-# # Firebase-Initialisierung
-# try:
-#     cred = credentials.Certificate("./config/serviceAccountKey.json")
-#     firebase_admin.initialize_app(cred)
-# except Exception as e:
-#     print(f"Firebase initialization error: {str(e)}")
-#     exit(1)
+from services.model_service import ModelService
+
 
 app = Flask(__name__)
 CORS(app, resources={r"/predict": {"origins": "http://localhost:3000"}})
