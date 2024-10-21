@@ -7,7 +7,7 @@ from services.model_service import ModelService
 
 
 app = Flask(__name__)
-CORS(app, resources={r"/predict": {"origins": "http://localhost:3000"}})
+CORS(app)  # Erlaube CORS für alle Routen und Ursprünge
 
 current_dir = os.path.dirname(os.path.abspath(__file__))
 model_service = ModelService(current_dir)

@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import styles from './GalleryPage.module.scss';
 import { ReactComponent as BackIcon } from "../../assets/icons/close.svg";
 import { ReactComponent as InfoIcon } from "../../assets/icons/info.svg";
@@ -6,6 +6,7 @@ import { useNavigate } from 'react-router-dom';
 import ViewContainer from '../../components/ViewContainer/ViewContainer';
 import { useDetailContext } from '../../contexts/DetailContext';
 import { useImageContext } from '../../contexts/ImageContext';
+import ApiService from '../../services/ApiService';
 
 const GalleryPage: React.FC = () => {
   const navigate = useNavigate();
@@ -30,6 +31,18 @@ const GalleryPage: React.FC = () => {
   const closeLightbox = () => {
     setLightboxImage(null);
   };
+
+  useEffect(() => {
+    const fetchHelloMessage = async () => {
+        try {
+            await ApiService.getHello(); // Holt die Nachricht von /hello und zeigt sie an
+        } catch (error) {
+            console.error('Fehler beim Abrufen der Nachricht:', error);
+        }
+    };
+
+    fetchHelloMessage();
+}, []);
 
   return (
     <div className={styles.pageContainer}>
