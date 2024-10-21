@@ -14,12 +14,12 @@ model_service = ModelService(current_dir)
 
 @app.route('/hello', methods=['GET'])
 def hello_world():
-    return jsonify({'message': 'Hello World!'}), 200
+    return jsonify({'message': 'Hello New World!'}), 200
 
 # Neuer Test-Endpoint
 @app.route('/test', methods=['GET'])
 def test():
-    return jsonify({'message': 'This is a test endpoint'}), 200
+    return jsonify({'message': 'This is a test endpoint test'}), 200
 
 
 ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg'}
