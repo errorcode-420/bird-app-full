@@ -19,7 +19,7 @@ def hello_world():
 # Neuer Test-Endpoint
 @app.route('/test', methods=['GET'])
 def test():
-    return jsonify({'message': 'This is a test endpoint test'}), 200
+    return jsonify({'message': 'This is a test endpoint test NEW'}), 200
 
 
 ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg'}
