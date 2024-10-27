@@ -1,17 +1,21 @@
-FROM python:3.12.6
+# Wähle ein Basis-Image
+FROM python:3.10-slim
 
-# Set the working directory
+# Arbeitsverzeichnis erstellen
 WORKDIR /app
 
-# Install dependencies
-COPY requirements.txt requirements.txt
-RUN pip install -r requirements.txt
+# Abhängigkeiten kopieren
+COPY requirements.txt ./
+RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy the application code
-COPY src/ /app/
+# Anwendungscode kopieren
+COPY src/ ./src/
 
-# Set environment variables
-ENV PORT 8080
+# Umgebungsvariable setzen
+ENV FLASK_APP=src/app.py
 
-# Run the Flask app using gunicorn
-CMD exec gunicorn --bind :$PORT --workers 1 --threads 8 app:app
+# Port freigeben
+EXPOSE 5000
+
+# Startbefehl für die Anwendung
+CMD ["flask", "run", "--host=0.0.0.0", "--port=5000"]
